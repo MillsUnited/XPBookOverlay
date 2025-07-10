@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "xpbookoverlay",
+  "version": "1.0",
+  "name": "XPBookOverlay",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/xpbookoverlay/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.mills.xpbookoverlay.client.MainDataGenerator"
+    ],
+    "client": [
+      "com.mills.xpbookoverlay.client.MainClient"
+    ],
+    "main": [
+      "com.mills.xpbookoverlay.Main"
+    ]
+  },
+  "mixins": [
+    "xpbookoverlay.mixins.json",
+    {
+      "config": "xpbookoverlay.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.21.5"
+  }
+}
